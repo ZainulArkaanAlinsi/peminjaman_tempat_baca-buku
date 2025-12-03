@@ -43,6 +43,7 @@ dev_dependencies:
 flutter:
   uses-material-design: true
 
-  assets:
-    - assets/images/
-    - assets/icons/
+  # Assets - Uncomment jika Anda sudah punya file assets
+  # assets:
+  #   - assets/images/
+  #   - assets/icons/

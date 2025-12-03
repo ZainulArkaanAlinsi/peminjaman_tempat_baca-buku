@@ -30,7 +30,7 @@ class ProfilePage extends StatelessWidget {
                 radius: 60,
                 backgroundColor: Theme.of(
                   context,
-                ).colorScheme.primary.withOpacity(0.1),
+                ).colorScheme.primary.withValues(alpha: 0.1),
                 child: user.photoUrl != null
                     ? ClipOval(
                         child: Image.network(
@@ -170,7 +170,7 @@ class ProfilePage extends StatelessWidget {
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 10,
             offset: const Offset(0, 4),
           ),

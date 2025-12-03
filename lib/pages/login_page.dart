@@ -30,7 +30,7 @@ class LoginPage extends StatelessWidget {
                   decoration: BoxDecoration(
                     color: Theme.of(
                       context,
-                    ).colorScheme.primary.withOpacity(0.1),
+                    ).colorScheme.primary.withValues(alpha: 0.1),
                     shape: BoxShape.circle,
                   ),
                   child: Icon(
@@ -146,7 +146,7 @@ class LoginPage extends StatelessWidget {
                     style: Theme.of(context).textTheme.bodyMedium,
                   ),
                   TextButton(
-                    onPressed: () => Get.toNamed(Routes.REGISTER),
+                    onPressed: () => Get.toNamed(Routes.register),
                     child: const Text('Daftar Sekarang'),
                   ),
                 ],

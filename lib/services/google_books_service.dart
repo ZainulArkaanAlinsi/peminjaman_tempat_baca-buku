@@ -41,8 +41,7 @@ class GoogleBooksService {
       title: volumeInfo['title'] ?? 'No Title',
       author: (volumeInfo['authors'] as List?)?.join(', ') ?? 'Unknown Author',
       description: volumeInfo['description'] ?? 'No description available',
-      coverUrl:
-          imageLinks['thumbnail']?.replaceAll('http:', 'https:') ??
+      coverUrl: imageLinks['thumbnail']?.replaceAll('http:', 'https:') ??
           'https://via.placeholder.com/400x600?text=No+Cover',
       category: (volumeInfo['categories'] as List?)?.first ?? 'General',
       pages: volumeInfo['pageCount'] ?? 0,
@@ -64,8 +63,7 @@ class GoogleBooksService {
       return Chapter(
         id: 'chapter_${index + 1}',
         title: 'Chapter ${index + 1}',
-        content:
-            '''
+        content: '''
           <h2>Chapter ${index + 1}</h2>
           <p>$preview</p>
           <p>Untuk membaca buku lengkap, silakan kunjungi Google Books atau toko buku online.</p>

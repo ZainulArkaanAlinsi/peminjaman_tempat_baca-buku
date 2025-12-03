@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'app/routes.dart';
 import 'app/theme.dart';
@@ -36,7 +35,7 @@ class MyApp extends StatelessWidget {
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
       themeMode: ThemeMode.light,
-      initialRoute: Routes.LOGIN,
+      initialRoute: Routes.splash, // Mulai dari splash
       getPages: AppPages.routes,
     );
   }

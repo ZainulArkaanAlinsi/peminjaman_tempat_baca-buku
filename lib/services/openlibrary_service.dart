@@ -89,8 +89,7 @@ class OpenLibraryService {
     return Book(
       id: work['key']?.toString().replaceAll('/works/', '') ?? '',
       title: work['title'] ?? 'No Title',
-      author:
-          (work['authors'] as List?)?.map((a) => a['name']).join(', ') ??
+      author: (work['authors'] as List?)?.map((a) => a['name']).join(', ') ??
           'Unknown Author',
       description: work['description'] is String
           ? work['description']
@@ -117,8 +116,7 @@ class OpenLibraryService {
       id: doc['key']?.toString().replaceAll('/works/', '') ?? '',
       title: doc['title'] ?? 'No Title',
       author: (doc['author_name'] as List?)?.join(', ') ?? 'Unknown Author',
-      description:
-          (doc['first_sentence'] as List?)?.join(' ') ??
+      description: (doc['first_sentence'] as List?)?.join(' ') ??
           'No description available',
       coverUrl: coverUrl,
       category: (doc['subject'] as List?)?.first ?? 'General',
@@ -132,13 +130,13 @@ class OpenLibraryService {
   }
 
   // Generate sample chapters
+  // Generate sample chapters
   List<Chapter> _generateSampleChapters(String bookTitle) {
     return List.generate(10, (index) {
       return Chapter(
         id: 'chapter_${index + 1}',
         title: 'Chapter ${index + 1}: ${_getChapterTitle(index + 1)}',
-        content:
-            '''
+        content: '''
           <h2>Chapter ${index + 1}</h2>
           <p>This is a sample chapter from "$bookTitle".</p>
           <p>Open Library provides metadata and covers, but full text reading 
